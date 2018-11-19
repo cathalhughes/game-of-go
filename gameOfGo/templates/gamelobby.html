@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <title>GO</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+	<link href="{{url_for('.static', filename='login.css')}}" rel="stylesheet">
+
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body background="static/gogame.png">
+<div class="container">
+    	<div class="row">
+			<div>
+				<div class="panel panel-login">
+                    <div align="center" class="jumbotron">
+                      <h1 class="display-3">Welcome To Our GO - Game Lobby</h1>
+                      <p class="lead">This is the main homepage for our game of GO. From here you can choose to start a game as Black, join a game as White and view the Online Leaderboard.</p>
+                      <hr class="my-4">
+                      <p>If you choose to start a game you will be asked to wait for another player and you will start as black. If you choose to join a game you will be added to somebody else's game and will start second.
+                      The leaderboard will show the Top 10 users of the game.</p>
+                      <hr class="my-4">
+                      <p class="lead">
+                        <a class="btn btn-primary btn-lg" href="http://52.19.2.193/?color=w" role="button">Start As White</a>
+                        <a class="btn btn-primary btn-lg" href="http://52.19.2.193/?color=b" role="button">Join As Black</a>
+                        <a class="btn btn-primary btn-lg" href="{{ url_for('leaderboard') }}" role="button">View LeaderBoard</a>
+                      </p>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

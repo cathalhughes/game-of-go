@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <title>GO</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="{{url_for('.static', filename='buttons.css')}}" rel="stylesheet">
+
+</head>
+
+<body background="static/gogame.png">
+<div class="container">
+    <div class="row">
+        <div align="center" class="panel panel-primary filterable">
+            <div class="panel-heading">
+                <h3 class="panel-title">User LeaderBoard</h3>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr class="filters">
+                        <th><input type="text" class="form-control" placeholder="Rank" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Username" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="E-mail" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Score" disabled></th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for table in user.query.order_by(user.score.desc()).limit(10) %}
+                    <tr>
+                        <td>{{table.id}}</td>
+                        <td>{{table.username}}</td>
+                        <td>{{table.email}}</td>
+                        <td>{{table.score}}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <p><a class="btn btn-primary btn-lg" href="{{ url_for('gamelobby') }}" role="button">Return to Game Lobby</a></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "go",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "expressjs": "^1.0.1",
+    "socketio": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stetchy/ca314-project.git"
+  },
+  "author": "riain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stetchy/ca314-project/issues"
+  },
+  "homepage": "https://github.com/stetchy/ca314-project#readme"
+}
